@@ -16,13 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.http import HttpResponse
-
-def home(request):
-    return HttpResponse("<p>Olá, sou o Pedro e essa é a página de login do usuário!</p")
 
 urlpatterns = [
-    path('', home),
     path('admin/', admin.site.urls),
     path('usuarios/', include('usuarios.urls'))
 ]
